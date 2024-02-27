@@ -1,0 +1,44 @@
+const fs = require('fs');
+const { exec } = require('child_process');
+const nodemailer = require('nodemailer');
+
+// Execute Newman tests
+exec('newman run postman-sample-collection.json -r html', (error, stdout, stderr) => {
+    if (error) {
+        console.error(`Error executing Newman: ${error}`);
+        return;
+    }
+
+    // Read the HTML report
+    const htmlReport = fs.readFileSync('newman/Sample Postman Collection-2024-02-26-16-15-54-905-0.html', 'utf8');
+
+    // Check if tests failed
+    const testsFailed = htmlReport.includes('class="failure"');
+
+    // Configure email transporter
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'adityamalviya31011999@gmail.com',
+            pass: 'txkr xcsn fnry txvk'
+        }
+    });
+
+    // Compose email
+    const mailOptions = {
+        from: 'adityamalviya31011999@gmail.com',
+        to: 'adityamalviya_02@qarleaf.com',
+        subject: `Newman Test Report - ${testsFailed ? 'Failed' : 'Passed'}`,
+        html: 'See attached Newman HTML report.',
+        attachments: [{ filename: 'report.html', content: htmlReport }]
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            console.error(`Error sending email: ${err}`);
+        } else {
+            console.log(`Email sent: ${info.response}`);
+        }
+    });
+});

@@ -102,7 +102,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "9bc95d9d-b39a-48f0-971e-6be69c9a2926",
+				"id": "3d3c0ee0-8fa4-4850-8080-91774fc747d0",
 				"type": "text/javascript",
 				"exec": [
 					"// Required modules",
@@ -111,7 +111,7 @@
 					"const fs = require('fs');",
 					"",
 					"// Define Postman collection URL and API key",
-					"const collectionUrl = \"https://api.getpostman.com/collections/:collection_uid?apikey=your_api_key\";",
+					"const collectionUrl = \"https://api.getpostman.com/collections/29049705-fb73ffdd-ca8c-40a9-ba3a-5718a5231c68?apikey=PMAK-65e5ae268f1fdb0001d378cf-12c9b32e23e77db7f680a33792a92f383f\";",
 					"",
 					"// Run Newman with the collection URL",
 					"newman.run({",
@@ -166,7 +166,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ee9c8d13-f34a-4885-aa31-bf06c94e0b0a",
+				"id": "2a538066-2320-4b39-aec0-85f828a285d0",
 				"type": "text/javascript",
 				"exec": [
 					""

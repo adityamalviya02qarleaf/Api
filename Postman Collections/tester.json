@@ -102,7 +102,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "3d3c0ee0-8fa4-4850-8080-91774fc747d0",
+				"id": "99e3ca81-1bfd-48b5-bb2c-bffe52cd6972",
 				"type": "text/javascript",
 				"exec": [
 					"// Required modules",
@@ -111,7 +111,7 @@
 					"const fs = require('fs');",
 					"",
 					"// Define Postman collection URL and API key",
-					"const collectionUrl = \"https://api.getpostman.com/collections/29049705-fb73ffdd-ca8c-40a9-ba3a-5718a5231c68?apikey=PMAK-65e5ae268f1fdb0001d378cf-12c9b32e23e77db7f680a33792a92f383f\";",
+					"const collectionUrl = \"https://api.getpostman.com/collections/:29049705-fb73ffdd-ca8c-40a9-ba3a-5718a5231c68?apikey=PMAK-65e5ae268f1fdb0001d378cf-12c9b32e23e77db7f680a33792a92f383f\";",
 					"",
 					"// Run Newman with the collection URL",
 					"newman.run({",
@@ -131,15 +131,15 @@
 					"    let transporter = nodemailer.createTransport({",
 					"        service: 'gmail',",
 					"        auth: {",
-					"            user: 'your_email@gmail.com',",
-					"            pass: 'your_password'",
+					"            user: 'adityamalviya31011999@gmail.com',",
+					"            pass: 'txkr xcsn fnry txvk'",
 					"        }",
 					"    });",
 					"",
 					"    // Setup email data",
 					"    let mailOptions = {",
-					"        from: 'your_email@gmail.com',",
-					"        to: 'recipient_email@gmail.com',",
+					"        from: 'adityamalviya31011999@gmail.com',",
+					"        to: 'adityamalviya_02@qarleaf.com',",
 					"        subject: 'Postman Collection Report',",
 					"        html: report,",
 					"        attachments: [",
@@ -166,7 +166,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "2a538066-2320-4b39-aec0-85f828a285d0",
+				"id": "53029d29-7a43-452b-ba14-329132cc389d",
 				"type": "text/javascript",
 				"exec": [
 					""
